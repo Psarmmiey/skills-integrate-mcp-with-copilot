@@ -16,6 +16,7 @@ body {
 }
 
 header {
+  position: relative;
   text-align: center;
   padding: 20px 0;
   margin-bottom: 30px;
@@ -26,6 +27,34 @@ header {
 
 header h1 {
   margin-bottom: 10px;
+}
+
+.auth-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.auth-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.auth-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#auth-icon {
+  font-size: 16px;
 }
 
 main {
@@ -190,6 +219,60 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.info-box {
+  background-color: #e3f2fd;
+  border-left: 4px solid #1976d2;
+  color: #0d47a1;
+}
+
+.info-box h3 {
+  color: #0d47a1;
 }
 
 footer {
