@@ -10,6 +10,12 @@
     <header>
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
+      <div class="auth-container">
+        <button id="auth-btn" class="auth-btn">
+          <span id="auth-icon">👤</span>
+          <span id="auth-text">Login</span>
+        </button>
+      </div>
     </header>
 
     <main>
@@ -21,8 +27,8 @@
         </div>
       </section>
 
-      <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
+      <section id="signup-container" class="hidden">
+        <h3>Sign Up for an Activity (Teachers Only)</h3>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
@@ -39,11 +45,36 @@
         </form>
         <div id="message" class="hidden"></div>
       </section>
+
+      <section id="student-info" class="info-box">
+        <h3>ℹ️ For Students</h3>
+        <p>You can view all activities and participants above. To register or unregister from activities, please contact your teacher.</p>
+      </section>
     </main>
 
     <footer>
       <p>&copy; 2023 Mergington High School</p>
     </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Teacher Login</h3>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="teacher-email">Email:</label>
+            <input type="email" id="teacher-email" required placeholder="teacher@mergington.edu" />
+          </div>
+          <div class="form-group">
+            <label for="teacher-password">Password:</label>
+            <input type="password" id="teacher-password" required />
+          </div>
+          <button type="submit">Login</button>
+        </form>
+        <div id="login-message" class="hidden"></div>
+      </div>
+    </div>
 
     <script src="app.js"></script>
   </body>
